@@ -2,14 +2,17 @@
 **How to get list of servers:**
 
         ...
+        @State var serverList: [ServerModel] = []
+        @State var lifetimeCancelBag: CancelBag = CancelBag()
+    
         let serverService = ServerService(serverRepository: ServerRepository())
         
-        serverService.serverList()
+        serverService.serverList(for: []) // <-- modify array for specific servers, [] means all of them
             .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { _ in },
                 receiveValue: { serverList in
-                // You handle list here
+                        self.serverList = serverList
                 }
             )
             .cancelled(by: lifetimeCancelBag)
@@ -26,5 +29,15 @@
                 // Use the closest server by region
             })
         ...
-        
+
+**How to create ViewModel with Speed checker:**
+
+        class MySpeedChecker: TestViewModel {
+            ...
+        }
+        let speedChecker = MySpeedChecker(serverModel: server)
+        speedChecker.test {
+                print("test done")
+        }
+
 
