@@ -1,7 +1,7 @@
 [
   {
     "name": "Amsterdam, Netherlands (Clouvider)",
-    "host": "https://ams.speedtest.clouvider.net/backend",
+    "host": "https://ams.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -11,7 +11,7 @@
   },
   {
     "name": "Chicago, USA (Clouvider)",
-    "host": "https://chi.speedtest.clouvider.net/backend",
+    "host": "https://chi.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -21,7 +21,7 @@
   },
   {
     "name": "Frankfurt, Germany (Clouvider)",
-    "host": "https://fra.speedtest.clouvider.net/backend",
+    "host": "https://fra.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -31,7 +31,7 @@
   },
   {
     "name": "London, UK (Clouvider)",
-    "host": "https://lon.speedtest.clouvider.net/backend",
+    "host": "https://lon.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -61,7 +61,7 @@
   },
   {
     "name": "New York, USA (Clouvider)",
-    "host": "https://nyc.speedtest.clouvider.net/backend",
+    "host": "https://nyc.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Rome, Italy (GARR)",
-    "host": "https://st-be-rm1.infra.garr.it",
+    "host": "https://st-be-rm1.infra.garr.it/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Turin, Italy (GARR)",
-    "host": "https://st-be-to1.infra.garr.it",
+    "host": "https://st-be-to1.infra.garr.it/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -131,7 +131,7 @@
   },
   {
     "name": "Dallas, USA (Clouvider)",
-    "host": "https://dal.speedtest.clouvider.net/backend",
+    "host": "https://dal.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -141,7 +141,7 @@
   },
   {
     "name": "Los Angeles, USA (Clouvider)",
-    "host": "https://lax.speedtest.clouvider.net/backend",
+    "host": "https://lax.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",
@@ -151,7 +151,7 @@
   },
   {
     "name": "Singapore (Clouvider)",
-    "host": "https://sgp.speedtest.clouvider.net/backend",
+    "host": "https://sgp.speedtest.clouvider.net/backend/",
     "paths": {
       "download": "garbage.php",
       "upload": "empty.php",

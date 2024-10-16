@@ -1,8 +1,5 @@
 //
 //  ServerRepository.swift
-//  FastFrameDigitPro
-//
-//  Created by Vladislav Odobescu on 08.10.2024.
 //
 
 import Foundation

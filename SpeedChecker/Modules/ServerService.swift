@@ -2,8 +2,6 @@
 //  ServerService.swift
 //  SpeedChecker
 //
-//  Created by Vladislav Odobescu on 10.10.2024.
-//
 
 import Foundation
 import Combine

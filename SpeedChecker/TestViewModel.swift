@@ -6,7 +6,7 @@
 import Foundation
 import Combine
 
-final class TestViewModel: ObservableObject {
+public class TestViewModel: ObservableObject {
     @Published
     private(set) var download = 0.0
 
