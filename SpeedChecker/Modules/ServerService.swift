@@ -6,14 +6,14 @@
 import Foundation
 import Combine
 
-final class ServerService {
+public final class ServerService {
     private let serverRepository: ServerRepository
 
     init(serverRepository: ServerRepository) {
         self.serverRepository = serverRepository
     }
 
-    func serverList() -> AnyPublisher<[ServerModel], ServerError> {
+    public func serverList() -> AnyPublisher<[ServerModel], ServerError> {
         return serverRepository.serverList()
             .map { serverEntities in
                 return serverEntities.compactMap { serverEntity in
