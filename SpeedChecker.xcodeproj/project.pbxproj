@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C156CC92CC10354007CC0E5 /* HardCodedServers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C156CC82CC10354007CC0E5 /* HardCodedServers.swift */; };
 		5C3F39B22CB7F50D0040325C /* TestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F39A02CB7F50D0040325C /* TestViewModel.swift */; };
 		5C3F39B32CB7F50D0040325C /* ServerRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F39A42CB7F50D0040325C /* ServerRepository.swift */; };
 		5C3F39B42CB7F50D0040325C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3F39A62CB7F50D0040325C /* Constants.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C156CC82CC10354007CC0E5 /* HardCodedServers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardCodedServers.swift; sourceTree = "<group>"; };
 		5C3F39962CB7F4D40040325C /* libSpeedChecker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpeedChecker.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3F39A02CB7F50D0040325C /* TestViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewModel.swift; sourceTree = "<group>"; };
 		5C3F39A32CB7F50D0040325C /* ServerList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ServerList.json; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				5C3F39A32CB7F50D0040325C /* ServerList.json */,
 				5C3F39C22CB801190040325C /* ServersEnum.swift */,
+				5C156CC82CC10354007CC0E5 /* HardCodedServers.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C156CC92CC10354007CC0E5 /* HardCodedServers.swift in Sources */,
 				5C3F39B72CB7F50D0040325C /* AnyPlublished + canceble.swift in Sources */,
 				5C3F39BF2CB7FF660040325C /* ServerService.swift in Sources */,
 				5C3F39BA2CB7F50D0040325C /* ServerModel.swift in Sources */,

@@ -26,53 +26,112 @@ enum SpeedTestServer: CaseIterable {
     case newarkUSADigitalOcean
     case saoPauloBrazilVultr
     
-    var details: (name: String, host: String, paths: Paths) {
+    var serverModel: ServerModel? {
         switch self {
         case .amsterdamNetherlandsClouvider:
-            return ("Amsterdam, Netherlands (Clouvider)", "https://ams.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "Amsterdam, Netherlands (Clouvider)",
+                host: "https://ams.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .chicagoUSClouvider:
-            return ("Chicago, USA (Clouvider)", "https://chi.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "Chicago, USA (Clouvider)",
+                host: "https://chi.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .frankfurtGermanyClouvider:
-            return ("Frankfurt, Germany (Clouvider)", "https://fra.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "Frankfurt, Germany (Clouvider)",
+                host: "https://fra.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .londonUKClouvider:
-            return ("London, UK (Clouvider)", "https://lon.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "London, UK (Clouvider)",
+                host: "https://lon.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .miamiUSAVultr:
-            return ("Miami, USA (Vultr)", "https://fl-us-ping.vultr.com/", Paths())
+            return ServerModel(
+                name: "Miami, USA (Vultr)",
+                host: "https://fl-us-ping.vultr.com/",
+                paths: self.defaultPaths)
         case .mumbaiIndiaDigitalOcean:
-            return ("Mumbai, India (DigitalOcean)", "https://in1.backend.librespeed.org/", Paths())
+            return ServerModel(
+                name: "Mumbai, India (DigitalOcean)",
+                host: "https://in1.backend.librespeed.org/",
+                paths: self.defaultPaths)
         case .newYorkUSClouvider:
-            return ("New York, USA (Clouvider)", "https://nyc.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "New York, USA (Clouvider)",
+                host: "https://nyc.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .osloNorwayLemuriaAPS:
-            return ("Oslo, Norway (Lemuria ApS)", "https://librespeed.apidev.eu/", Paths())
+            return ServerModel(
+                name: "Oslo, Norway (Lemuria ApS)",
+                host: "https://librespeed.apidev.eu/",
+                paths: self.defaultPaths)
         case .romeItalyGARR:
-            return ("Rome, Italy (GARR)", "https://st-be-rm1.infra.garr.it", Paths())
+            return ServerModel(
+                name: "Rome, Italy (GARR)",
+                host: "https://st-be-rm1.infra.garr.it/",
+                paths: self.defaultPaths)
         case .singaporeDigitalOcean:
-            return ("Singapore (DigitalOcean)", "https://sgp.backend.librespeed.org/", Paths())
+            return ServerModel(
+                name: "Singapore (DigitalOcean)",
+                host: "https://sgp.backend.librespeed.org/",
+                paths: self.defaultPaths)
         case .sydneyAustraliaDigitalOcean:
-            return ("Sydney, Australia (DigitalOcean)", "https://au1.backend.librespeed.org/", Paths())
+            return ServerModel(
+                name: "Sydney, Australia (DigitalOcean)",
+                host: "https://au1.backend.librespeed.org/",
+                paths: self.defaultPaths)
         case .turinItalyGARR:
-            return ("Turin, Italy (GARR)", "https://st-be-to1.infra.garr.it", Paths())
+            return ServerModel(
+                name: "Turin, Italy (GARR)",
+                host: "https://st-be-to1.infra.garr.it/",
+                paths: self.defaultPaths)
         case .poznanPolandKamilSzczepanski:
-            return ("Poznan, Poland (Kamil Szczepanski)", "https://speedtest.kamilszczepanski.com/", Paths())
+            return ServerModel(
+                name: "Poznan, Poland (Kamil Szczepanski)",
+                host: "https://speedtest.kamilszczepanski.com/",
+                paths: self.defaultPaths)
         case .dallasUSClouvider:
-            return ("Dallas, USA (Clouvider)", "https://dal.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "Dallas, USA (Clouvider)",
+                host: "https://dal.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .losAngelesUSClouvider:
-            return ("Los Angeles, USA (Clouvider)", "https://lax.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "Los Angeles, USA (Clouvider)",
+                host: "https://lax.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .singaporeClouvider:
-            return ("Singapore (Clouvider)", "https://sgp.speedtest.clouvider.net/backend", Paths())
+            return ServerModel(
+                name: "Singapore (Clouvider)",
+                host: "https://sgp.speedtest.clouvider.net/backend/",
+                paths: self.defaultPaths)
         case .melbourneAustraliaDigitalOcean:
-            return ("Melbourne, Australia (DigitalOcean)", "https://mel1.backend.librespeed.org/", Paths())
+            return ServerModel(
+                name: "Melbourne, Australia (DigitalOcean)",
+                host: "https://mel1.backend.librespeed.org/",
+                paths: self.defaultPaths)
         case .newarkUSADigitalOcean:
-            return ("Newark, USA (DigitalOcean)", "https://nwk.backend.librespeed.org/", Paths())
+            return ServerModel(
+                name: "Newark, USA (DigitalOcean)",
+                host: "https://nwk.backend.librespeed.org/",
+                paths: self.defaultPaths)
         case .saoPauloBrazilVultr:
-            return ("São Paulo, Brazil (Vultr)", "https://saopaulo.speedtest.vultr.com/", Paths())
+            return ServerModel(
+                name: "São Paulo, Brazil (Vultr)",
+                host: "https://saopaulo.speedtest.vultr.com/",
+                paths: self.defaultPaths)
         }
     }
     
-    struct Paths {
-        let download = "garbage.php"
-        let upload = "empty.php"
-        let ping = "empty.php"
-        let ip = "getIP.php"
+    var defaultPaths: [String: String] {
+        return [
+            "download": "garbage.php",
+            "upload": "empty.php",
+            "ping": "empty.php",
+            "ip": "getIP.php"
+        ]
     }
 }

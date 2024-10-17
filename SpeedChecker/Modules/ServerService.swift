@@ -13,28 +13,15 @@ final class ServerService {
         self.serverRepository = serverRepository
     }
 
-    func serverList(for selectedServers: [SpeedTestServer]) -> AnyPublisher<[ServerModel], ServerError> {
+    func serverList() -> AnyPublisher<[ServerModel], ServerError> {
         return serverRepository.serverList()
             .map { serverEntities in
-                if selectedServers.isEmpty {
-                    return serverEntities.compactMap { serverEntity in
-                        return ServerModel(
-                            name: serverEntity.name,
-                            host: serverEntity.host,
-                            paths: serverEntity.paths
-                        )
-                    }
-                }
                 return serverEntities.compactMap { serverEntity in
-                    if let serverEnum = SpeedTestServer.allCases.first(where: { $0.details.name == serverEntity.name }),
-                       selectedServers.contains(serverEnum) {
-                        return ServerModel(
-                            name: serverEntity.name,
-                            host: serverEntity.host,
-                            paths: serverEntity.paths
-                        )
-                    }
-                    return nil
+                    return ServerModel(
+                        name: serverEntity.name,
+                        host: serverEntity.host,
+                        paths: serverEntity.paths
+                    )
                 }
             }
             .mapError { _ in ServerError.unknown }

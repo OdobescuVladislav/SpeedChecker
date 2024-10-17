@@ -119,25 +119,25 @@ final class ServerModel: NSObject, ObservableObject {
             ).eraseToAnyPublisher()
         }.eraseToAnyPublisher()
     }
+}
 
-    struct Paths {
-        var download: URL
-        var upload: URL
-        var ping: URL
-        var ip: URL
+struct Paths {
+    var download: URL
+    var upload: URL
+    var ping: URL
+    var ip: URL
 
-        init?(host: URL, paths: [String: String]) {
-            let pathUrls = paths.compactMapValues { URL(string: $0, relativeTo: host) }
+    init?(host: URL, paths: [String: String]) {
+        let pathUrls = paths.compactMapValues { URL(string: $0, relativeTo: host) }
 
-            guard
-                let download = pathUrls["download"],
-                let upload = pathUrls["upload"],
-                let ip = pathUrls["ip"] else { return nil }
+        guard
+            let download = pathUrls["download"],
+            let upload = pathUrls["upload"],
+            let ip = pathUrls["ip"] else { return nil }
 
-            self.download = download
-            self.upload = upload
-            self.ping = pathUrls["ping"] ?? upload
-            self.ip = ip
-        }
+        self.download = download
+        self.upload = upload
+        self.ping = pathUrls["ping"] ?? upload
+        self.ip = ip
     }
 }
